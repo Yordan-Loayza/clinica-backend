@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="container">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#"><i class="bi bi-hospital"></i></a>
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="{% url 'home' %}" class="nav-link">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="{% url 'list' %}" class="nav-link">Mostrar horas de la agenda</a>
+          </li>
+          <li class="navbar-item">
+            <a href="{% url 'form' %}" class="nav-link">Agregar horas a la agenda </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      {% block content %}
+      <h1>Welcome</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolorem
+        sunt consequuntur porro aut illo, fugit assumenda amet? Maxime
+        asperiores sapiente facere velit esse eaque nesciunt reprehenderit
+        mollitia aspernatur perferendis!
+      </p>
+      {% endblock %}
+    </div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{% extends "agendas/base.html" %} {% block content %} {% if isbn %}
+<form action="{% url 'delete' %}" method="post">
+  {% csrf_token %}
+  <input type="text" hidden value="{{isbn}}" name="isbn">
+  <p>Esta seguro que desea eliminar la atencion {{rut}}?</p>
+  <button class="btn btn-danger">Si</button>
+  <a class="btn btn-dark" href="{% url 'list' %}">Cancelar</a>
+</form>
+{% else %}
+<p>Se debe enviar rut para eliminar</p>
+{% endif %} {% endblock %}

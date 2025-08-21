@@ -1,0 +1,17 @@
+{% extends "agendas/base.html" %} {% block content %}
+<form method="post" action="{% url 'create' %}">
+  {% csrf_token %}
+  <label>rut:</label>
+  <input class="form-control" type="text" name="rut" />
+  <label>nombre_paciente:</label>
+  <input class="form-control" type="text" name="nombre_paciente" />
+  <label>motivo_atencion:</label>
+  <input class="form-control" type="text" name="motivo_atencion" />
+  <label>fecha:</label>
+  <input class="form-control" type="text" name="fecha" />
+  <label>hora:</label>
+  <input class="form-control" type="text" name="hora" />
+  <button class="btn btn-success mt-2">Save</button>
+</form>
+
+{% endblock %}
